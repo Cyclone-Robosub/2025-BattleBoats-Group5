@@ -24,3 +24,4 @@ void loop() {
   Serial.println(distance);
   delay(250); //Uses milliseconds
 }
+
