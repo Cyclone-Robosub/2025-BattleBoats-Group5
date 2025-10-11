@@ -8,16 +8,39 @@ void setup() {
 }
 
 void loop() {
-  float dist = readDistanceCM();
+
+  int properDistance=14;
+  int gradientConstant=30;
+  int speed=100;
+
+  float frontDist = readDistanceCMFront();
+  float rightDist = readDistanceCMRight();
+
   Serial.print("Distance: ");
   Serial.print(dist);
   Serial.println(" cm");
 
-  if (dist > 15) {
-    driveForward(150);
-  } else {
-    driveStop();
-  }
 
-  delay(100);
-}
+  gradient=properDistance-rightDist;
+
+
+/*
+//ALL THE CONSTANT WILL BE CHANGED
+  if (frontDist < 15) {     //These parameters can be changed
+
+      turnLeft(speed);
+
+  }else{
+    if(gradient > 0){
+      adjustLeft(speed,gradient * gradientConstant);
+    }else{
+      if(gradient < 0){
+        adjustRight(speed,-gradient * gradientConstant);
+      }else{driveForward(speed);}
+    }
+  }
+*/
+delay(100);}
+    
+
+ 

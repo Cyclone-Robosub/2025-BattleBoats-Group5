@@ -27,13 +27,39 @@ void driveForward(int speed) {
   analogWrite(ENB_PIN, speed);
 }
 
+
+void adjustRight(int speed,int gradient){
+digitalWrite(IN1_PIN, HIGH);
+digitalWrite(IN2_PIN,LOW);
+digitalWrite(IN3_PIN, HIGH);
+digitalWrite(IN4_PIN, LOW);
+
+analogWrite(ENA_PIN, speed+gradient < 255 ? speed+gradient : 255);
+analogWrite(ENB_PIN, speed);
+
+}
+
+
+void adjustLeft(int speed,int gradient){
+digitalWrite(IN1_PIN, HIGH);
+digitalWrite(IN2_PIN,LOW);
+digitalWrite(IN3_PIN, HIGH);
+digitalWrite(IN4_PIN, LOW);
+
+analogWrite(ENA_PIN, speed);
+analogWrite(ENB_PIN, speed+gradient < 255 ? speed+gradient : 255);
+
+}
+
 void driveBackward(int speed) {
   digitalWrite(IN1_PIN, LOW);
   digitalWrite(IN2_PIN, HIGH);
+  
   digitalWrite(IN3_PIN, LOW);
   digitalWrite(IN4_PIN, HIGH);
 
   analogWrite(ENA_PIN, speed);
+  
   analogWrite(ENB_PIN, speed);
 }
 
