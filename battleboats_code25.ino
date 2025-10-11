@@ -24,7 +24,7 @@ void loop() {
   gradient=properDistance-rightDist;
 
 
-/*
+
 //ALL THE CONSTANT WILL BE CHANGED
   if (frontDist < 15) {     //These parameters can be changed
 
@@ -40,7 +40,7 @@ void loop() {
       }else{driveForward(speed);}
     }
   }
-*/
+
 delay(100);}
     
 
