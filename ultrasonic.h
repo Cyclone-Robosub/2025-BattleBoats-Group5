@@ -6,11 +6,11 @@
 // ==============================
 //       Pin configuration
 // ==============================
-#define TRIG1_PIN 2         //front
-#define ECHO1_PIN 3
+#define TRIG1_PIN 13         //front
+#define ECHO1_PIN 2
 
-#define TRIG2_PIN 4        //right
-#define ECHO2_PIN 5
+#define TRIG2_PIN 11        //right
+#define ECHO2_PIN 12
 
 void ultrasonicInit();
 float readDistanceCMFront();
