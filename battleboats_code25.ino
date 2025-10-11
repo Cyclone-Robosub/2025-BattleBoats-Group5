@@ -9,8 +9,8 @@ void setup() {
 
 void loop() {
 
-  int properDistance=14;
-  int gradientConstant=30;
+  float properDistance=14;
+  int gradientConstant=20;
   int speed=100;
 
   float frontDist = readDistanceCMFront();
@@ -36,6 +36,7 @@ void loop() {
     }else{
       if(gradient < 0){
         adjustRight(speed,-gradient * gradientConstant);
+      
       }else{driveForward(speed);}
     }
   }
